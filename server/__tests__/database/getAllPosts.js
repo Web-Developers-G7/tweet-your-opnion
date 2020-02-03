@@ -13,7 +13,6 @@ describe('test getAllPosts query', () => {
   test('test get All posts function', () => {
     expect.assertions(2);
     return allPosts().then(({ rows }) => {
-      console.log(rows);
       expect(rows).toBeDefined();
       expect(rows[0]).toBeDefined();
     });
