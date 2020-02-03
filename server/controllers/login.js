@@ -5,6 +5,9 @@ const { compare } = require('bcrypt');
 const { loginSchema } = require('./validation');
 const { getUserByEmail } = require('../db/queries');
 
+// Issue-6 : return user data
+// In progress
+
 module.exports = (req, res, next) => {
 	const { body: userData } = req;
 
