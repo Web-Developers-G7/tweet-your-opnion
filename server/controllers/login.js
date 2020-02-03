@@ -31,7 +31,10 @@ module.exports = (req, res, next) => {
           statusCode: 403
         };
       }
-      return { token: generateToken(userData.email), id: user_id };
+      return {
+        token: generateToken({ email: userData.email, id: user_id }),
+        id: user_id
+      };
     })
     .then(({ token, id }) => {
       res.cookie('token', token);

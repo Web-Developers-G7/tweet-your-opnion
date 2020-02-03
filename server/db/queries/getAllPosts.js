@@ -1,7 +1,7 @@
 const connection = require('../config/connection');
 
-const allPosts = () => {
-  return connection.query('SELECT * FROM posts returning *');
+const allPosts = (userId) => {
+  return connection.query('SELECT * FROM posts INNER JOIN users on users.id=$1',[userId]);
 };
 
 module.exports = allPosts;

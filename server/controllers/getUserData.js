@@ -1,7 +1,7 @@
 const userData = require('../db/queries/getUserById');
 
 const data = (req, res, next) => {
-  const id = req.params;
+  const { id } = req.params;
   userData(id)
     .then(({ rows }) => {
       res.json(rows);

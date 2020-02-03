@@ -1,10 +1,11 @@
 const getAllPosts = require('../db/queries/getAllPosts');
 
 const allPosts = (req, res, next) => {
-  getAllPosts()
+  const { id } = req.params;
+  getAllPosts(id)
     .then(({ rows }) => {
       return res.json({
-        posts: rows
+        data: rows
       });
     })
     .catch(next);
