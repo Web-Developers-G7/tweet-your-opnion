@@ -20,13 +20,16 @@ module.exports = (req, res, next) => {
         throw { message: 'you are not signed up', statusCode: 404 };
       }
       return {
-        authed: compare(userData.password, rows[0].password),
+        isAuth: compare(userData.password, rows[0].password),
         user_id: rows[0].id
       };
     })
-    .then(({ authed, user_id }) => {
-      if (authed === false) {
-        throw { message: 'incorrect password', statusCode: 403 };
+    .then(({ isAuth, user_id }) => {
+      if (isAuth === false) {
+        throw {
+          message: 'You have entered an invalid email or password',
+          statusCode: 403
+        };
       }
       return { token: generateToken(userData.email), id: user_id };
     })
