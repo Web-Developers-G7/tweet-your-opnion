@@ -6,8 +6,8 @@ const { errorHandler } = require('../controllers');
 
 Router.post('/signup', signup);
 Router.post('/login', login);
-Router.get('/posts/:id', getPostById)
 Router.use(authorizeUser);
+Router.get('/posts/:id', getPostById)
 Router.get('/getUserPosts', getUserPosts);
 Router.use(errorHandler);
 
