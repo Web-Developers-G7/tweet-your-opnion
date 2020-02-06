@@ -19,7 +19,7 @@ describe('test add post query', () => {
 
 		return addPost(input).then(data => {
 			expect(data.rows[0]).toBeDefined();
-			expect(data.rows[0].content).toBe(input.content);
+			expect(data.rows[0].post_content).toBe(input.content);
 		});
 	});
 });

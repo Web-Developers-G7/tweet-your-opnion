@@ -14,7 +14,7 @@ describe('get post comments by post id', () => {
 		const input = { id: 1 };
 		return getPostComments(input).then(data => {
 			const { rows } = data;
-			expect(rows[0].content).toBe('waw this is first fake comment');
+			expect(rows[0].comment_content).toBe('waw this is first fake comment1');
 		});
 	});
 });

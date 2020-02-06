@@ -15,7 +15,7 @@ CREATE TABLE users(
 CREATE TABLE posts(
   id SERIAL PRIMARY KEY,
   user_id INTEGER REFERENCES users(id),
-  content VARCHAR NOT NULL
+  post_content VARCHAR NOT NULL
 );
 
 CREATE TABLE post_likes(
@@ -27,7 +27,7 @@ CREATE TABLE comments(
   id SERIAL PRIMARY KEY,
   post_id INTEGER REFERENCES posts(id),
   user_id INTEGER REFERENCES users(id),
-  content VARCHAR NOT NULL
+  comment_content VARCHAR NOT NULL
 );
 
 CREATE TABLE comment_likes(
