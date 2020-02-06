@@ -21,9 +21,24 @@ INSERT INTO users (first_name, last_name,email,password,image_url, age) VALUES(
   'kyle', 'well', 'mossa5@gmail.com', '$2b$10$mL1ioC3Vnk/GaV6uMWAX0.M9Ki/sxxh1dJ8J4pFAhEpAXgmdKDQtK', null, 20
 );
 
-INSERT INTO posts (user_id, content) VALUES (1, 'this is fake post from fake data');
+INSERT INTO posts (user_id, post_content) VALUES (1, 'this is fake post from fake data');
+INSERT INTO posts (user_id, post_content) VALUES (1, 'this is fake post from fake data2');
 
-INSERT INTO comments (post_id, user_id, content) VALUES (1, 1, 'waw this is first fake comment'); 
+
+
+INSERT INTO comments (post_id, user_id, comment_content) VALUES (1, 1, 'waw this is first fake comment1'); 
+INSERT INTO comments (post_id, user_id, comment_content) VALUES (1, 2, 'waw this is first fake comment2'); 
+INSERT INTO comments (post_id, user_id, comment_content) VALUES (1, 3, 'waw this is first fake comment3');
+
+INSERT INTO comments (post_id, user_id, comment_content) VALUES (2, 1, 'waw this is first fake comment1'); 
+INSERT INTO comments (post_id, user_id, comment_content) VALUES (2, 2, 'waw this is first fake comment2'); 
+INSERT INTO comments (post_id, user_id, comment_content) VALUES (2, 3, 'waw this is first fake comment3');
+
+
+
+
+
+
 
 INSERT INTO post_likes (user_id, post_id) VALUES (1, 1);
 INSERT INTO post_likes (user_id, post_id) VALUES (2, 1);
