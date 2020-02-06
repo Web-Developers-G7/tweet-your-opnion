@@ -19,7 +19,7 @@ module.exports = id => {
 	];
 	return Promise.all(independentQuiers)
 		.then(() =>
-			connection.query('DELETE FROM comments WHERE user_id = $1', [id]),
+			connection.query('DELETE FROM comments WHERE post_id IN (SELECT id FROM posts WHERE user_id=$1)', [id]),
 		)
 		.then(() => connection.query('DELETE FROM posts WHERE user_id=$1', [id]))
 		.then(() =>
