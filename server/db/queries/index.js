@@ -15,25 +15,25 @@ const deleteLikeFromComment = require('./deleteLikeFromComment');
 const getCommentLikes = require('./getCommentLikes');
 const getUserByEmail = require('./getUserByEmail');
 const getUserById = require('./getUserById');
-const getPostById = require('./getPostById')
+const getPostById = require('./getPostById');
 
 module.exports = {
-	getUsers,
-	addUser,
-	updateUserData,
-	deleteUserById,
-	getUserById,
-	addPost,
-	addComment,
-	getPostById,
-	getUserPosts,
-	deletePost,
-	deleteComment,
-	getPostComments,
-	addLikeToPost,
-	deleteLikeFromPost,
-	addLikeToComment,
-	deleteLikeFromComment,
-	getCommentLikes,
-	getUserByEmail,
+  getUsers,
+  addUser,
+  updateUserData,
+  deleteUserById,
+  getUserById,
+  addPost,
+  addComment,
+  getPostById,
+  getUserPosts,
+  deletePost,
+  deleteComment,
+  getPostComments,
+  addLikeToPost,
+  deleteLikeFromPost,
+  addLikeToComment,
+  deleteLikeFromComment,
+  getCommentLikes,
+  getUserByEmail,
 };
