@@ -15,9 +15,10 @@ describe('get post by id', () => {
 		const input = {
 			id: 1,
 		};
-		return getPostById(input).then(data => {
-			expect(data.rows[0]).toBeDefined();
-			expect(data.rows[0].id).toBe(input.id);
+		return getPostById(input.id).then(data => {
+			const { post: { id } } = data;
+			expect(data).toBeDefined();
+			expect(id).toBe(input.id);
 		});
 	});
 });
